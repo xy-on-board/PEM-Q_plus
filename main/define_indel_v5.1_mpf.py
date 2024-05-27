@@ -890,7 +890,7 @@ def main():
     define_indel = Define_indel(**kwargs)
     define_indel.generate_indel_tab_file()
 
-    print("\ndefine_indel.py Done in {}s".format(round(time()-start_time, 3)))
+    print("\nDefine_indel.py done in {}s".format(round(time()-start_time, 3)))
     
 if __name__ == '__main__':
     main()
