@@ -28,7 +28,7 @@ Author: Xinyi Liu
 Contact: xinyi.liu@stu.pku.edu.cn
 
 Usage:
-    DSB_filter   <basename> <yourfile>
+    DSB_filter   <basename> <file>
 
 Options:
 -h --help               Show this screen.
