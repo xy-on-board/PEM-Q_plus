@@ -916,9 +916,6 @@ class Define_transloc(object):
         transloc_tab = pd.concat([transloc_tab, merge_transloc_tab], ignore_index=True)
         transloc_tab.to_csv("transloc/" + self.basename + "_mut.tab", sep='\t', index=False)
 
-
-        
-
 def main():
     
     start_time = time()
@@ -940,7 +937,7 @@ def main():
     define_transloc.merge_r1_r2_transloc()
     
 
-    print("\ndefine_transloc.py Done in {}s".format(round(time()-start_time, 3)))
+    print("\nDefine_transloc.py done in {}s".format(round(time()-start_time, 3)))
     
 if __name__ == '__main__':
     main()
