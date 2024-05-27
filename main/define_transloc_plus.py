@@ -919,7 +919,7 @@ def main():
     define_transloc.merge_r1_r2_transloc()
     
 
-    print("\ndefine_transloc.py Done in {}s".format(round(time()-start_time, 3)))
+    print("\nDefine_transloc.py done in {}s".format(round(time()-start_time, 3)))
     
 if __name__ == '__main__':
     main()
