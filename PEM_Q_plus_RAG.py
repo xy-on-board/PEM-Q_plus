@@ -96,11 +96,8 @@ def run_script(sample=None, cutsite=None, genome=None, primer=None, primer_chr=N
     cmd = "define_statistics_add_filter_newDSBfilt_RAG.py {} {} {} {} {} {} {} CCACGCGTGCTCTACA".format(basename, genome, cutsite, 500000, primer, primer_chr, primer_strand)
     print(cmd)
     os.system(cmd)
-
-    cmd = "rm -rf indel/*indel.bam indel/*_nosti_indel_add.bam indel/_nosti_indel_all.bam primer/*p.bam"
-    os.system(cmd)
     
-    print("PEM-Q Done in {}s".format(round(time()-start_time, 3)))
+    print("PEM-Q_plus_RAG Done in {}s".format(round(time()-start_time, 3)))
     
 def main():
     args = docopt(__doc__,version='PEM-Q v5.1s')
