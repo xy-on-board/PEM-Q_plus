@@ -57,7 +57,7 @@ def run_script(sample=None, cutsite=None, genome=None, primer=None, primer_chr=N
     mq_threshold = 0
 
     print("######## 01 Reads alignment... ########")
-    cmd = "align_make_plus.py {} {}_R1.fq.gz {}_R2.fq.gz -a CCACGCGTGCTCTACA  -p {} -r {} -s {} -e {} -d {}".format(genome,basename,basename,primer,primer_chr,primer_start,primer_end,primer_strand)
+    cmd = "align_make_plus.py {} {}_R1.fq.gz {}_R2.fq.gz -a CCACGCGTGCTCTACA  -p {} -r {} -s {} -e {} -d {}".format(genome, basename, basename, primer, primer_chr, primer_start, primer_end, primer_strand)
     print(cmd)
     os.system(cmd)
 
@@ -93,14 +93,11 @@ def run_script(sample=None, cutsite=None, genome=None, primer=None, primer_chr=N
     os.system(cmd)
 
     print("######## 07 filter and Statistics... ########")
-    cmd = "define_statistics_add_filter_newDSBfilt_Cas.py {} {} {} {} {} {} {} CCACGCGTGCTCTACA".format(basename,genome,cutsite,500000,primer,primer_chr,primer_strand)
+    cmd = "define_statistics_add_filter_newDSBfilt_Cas.py {} {} {} {} {} {} {} CCACGCGTGCTCTACA".format(basename, genome, cutsite, 500000, primer, primer_chr, primer_strand)
     print(cmd)
     os.system(cmd)
-
-    cmd = "rm -rf indel/*indel.bam indel/*_nosti_indel_add.bam indel/_nosti_indel_all.bam primer/*p.bam"
-    os.system(cmd)
     
-    print("PEM-Q Done in {}s".format(round(time()-start_time, 3)))
+    print("PEM-Q plus done in {}s".format(round(time()-start_time, 3)))
     
 def main():
     args = docopt(__doc__,version='PEM-Q v5.1s')
