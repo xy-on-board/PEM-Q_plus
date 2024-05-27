@@ -141,7 +141,7 @@ def main():
     
     define_substitution(**kwargs)
 
-    print("\ndefine_substitution.py Done in {}s".format(round(time()-start_time, 3)))
+    print("\nDefine_substitution.py done in {}s".format(round(time()-start_time, 3)))
 
 if __name__ == '__main__':
     main()
