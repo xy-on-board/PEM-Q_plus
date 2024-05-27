@@ -139,7 +139,7 @@ def main():
     
     dedup(**kwargs)
 
-    print("\ndedup.py Done in {}s".format(round(time()-start_time, 3)))
+    print("\nDedup.py done in {}s".format(round(time()-start_time, 3)))
     
 if __name__ == '__main__':
     main()
